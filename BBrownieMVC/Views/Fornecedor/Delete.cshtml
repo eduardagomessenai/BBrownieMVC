@@ -1,0 +1,51 @@
+﻿@model BBrownieMVC.Models.Fornecedor
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar Fornecedores</h1>
+
+<h3>Você tem certeza que quer deletar isso</h3>
+<div>
+    <h4>Fornecedores</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeEmpresa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeEmpresa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
